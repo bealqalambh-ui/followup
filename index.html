@@ -235,8 +235,8 @@ const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]));
 let students=[], reports={}, who=null, pin=null, role=null, users=[], sel=null, period="", rtab="ready", rteach="";
 /* ====== الإعداد: الصقوا هني رابط مشروع Supabase والمفتاح العام (anon public) ====== */
-const SUPABASE_URL="PASTE_PROJECT_URL_HERE";
-const SUPABASE_ANON_KEY="PASTE_ANON_KEY_HERE";
+const SUPABASE_URL="https://qmuizcnpemzhmgsjgoml.supabase.co";
+const SUPABASE_ANON_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFtdWl6Y25wZW16aG1nc2pnb21sIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI1MTAzNDMsImV4cCI6MjEwODA4NjM0M30.YKLPEnRENQWAdFZtYYN113sYxfZSbDN3xOR4fNKuM58";
 /* ================================================================================ */
 const sb=(window.supabase&&SUPABASE_URL.startsWith("https"))?window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY):null;
 async function rpc(fn,args){const {data,error}=await sb.rpc(fn,args||{});if(error)throw error;return data}
